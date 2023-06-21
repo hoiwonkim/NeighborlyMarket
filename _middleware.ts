@@ -1,6 +1,8 @@
-import type { NextRequest, NextFetchEvent } from "next/server";
+// ./neighborly-market/pages/_middleware.ts
+import type { NextRequest } from "next/server";
 import { NextResponse } from "next/server";
-export function middleware(req: NextRequest, ev: NextFetchEvent) {
+
+export default function middleware(req: NextRequest) {
   if (req.ua?.isBot) {
     return new Response("Plz don't be a bot. Be human.", { status: 403 });
   }
@@ -9,5 +11,5 @@ export function middleware(req: NextRequest, ev: NextFetchEvent) {
       return NextResponse.redirect(new URL("/enter", req.url));
     }
   }
-  //  return NextResponse.json({ ok: true });
 }
+

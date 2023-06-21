@@ -82,7 +82,7 @@ const MiniProfile = () => {
 
 const Profile: NextPage = () => {
   return (
-    <Layout hasTabBar title="나의 캐럿">
+    <Layout hasTabBar title="Neighborly N">
       <div className="px-4">
         <Suspense fallback="Loading Mini Profile">
           <MiniProfile />
@@ -107,7 +107,7 @@ const Profile: NextPage = () => {
                 </svg>
               </div>
               <span className="text-sm mt-2 font-medium text-gray-700">
-                판매내역
+                Sales details
               </span>
             </a>
           </Link>
@@ -130,7 +130,7 @@ const Profile: NextPage = () => {
                 </svg>
               </div>
               <span className="text-sm mt-2 font-medium text-gray-700">
-                구매내역
+                Purchase history
               </span>
             </a>
           </Link>
@@ -153,7 +153,7 @@ const Profile: NextPage = () => {
                 </svg>
               </div>
               <span className="text-sm mt-2 font-medium text-gray-700">
-                관심목록
+                Watchlist
               </span>
             </a>
           </Link>
